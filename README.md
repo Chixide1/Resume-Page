@@ -1,2 +1,5 @@
-# Azure-Resume
-My Resume built up using Azure
+# Azure-Resume Challenge
+The following sections describe how I built up my resume utilising Azure
+![Alt text](image.png)
+## Frontend
+-
