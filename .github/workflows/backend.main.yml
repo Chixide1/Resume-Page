@@ -34,16 +34,13 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api/azureResumeCounter'
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        dir=$(pwd);$dir >> $GITHUB_PATH
         popd
         
     - name: 'Run unit test'
       shell: bash
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api/azureResumeCounter'
-        dir=$(pwd);$dir >> $GITHUB_PATH
-        popd
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/tests'
-        export PYTHONPATH=$HOME/dirWithScripts/:$PYTHONPATH
         python -m unittest -v TEST-visitor_counter.py
 
     - name: 'Run Azure Functions Action'
