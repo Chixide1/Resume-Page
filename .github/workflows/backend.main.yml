@@ -39,7 +39,7 @@ jobs:
       shell: bash
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api/azureResumeCounter'
-        python -m unittest -v counter.py
+        python -m unittest -v TEST-visitor_counter.py
     # - name: 'Run Azure Functions Action'
     #   uses: Azure/functions-action@v1
     #   id: fa
