@@ -1,5 +1,5 @@
 {
-  "scriptFile": "counter.py",
+  "scriptFile": "dbcounter.py",
   "bindings": [
     {
       "authLevel": "function",
