@@ -34,7 +34,7 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api/azureResumeCounter'
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        dir=$(pwd);$dir >> $GITHUB_PATH
+        dir=$(pwd);echo $dir >> $GITHUB_PATH
         popd
         
     - name: 'Run unit test'
