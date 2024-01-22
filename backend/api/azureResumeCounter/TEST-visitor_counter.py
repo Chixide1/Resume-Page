@@ -1,5 +1,5 @@
 import unittest
-from backend.api.azureResumeCounter.dbcounter import updatecount
+from dbcounter import updatecount
 
 class TestCounter(unittest.TestCase):
 
