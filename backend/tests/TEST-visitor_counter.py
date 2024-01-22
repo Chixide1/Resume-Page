@@ -1,7 +1,7 @@
 import unittest
 import sys
-sys.path.append(r".\Azure\Azure-Resume\backend\api\azureResumeCounter")
-sys.path.append(r"~/work/Azure-Resume/Azure-Resume/backend/api/azureResumeCounter") #add to the python path to grab the test function
+# sys.path.append(r".\Azure\Azure-Resume\backend\api\azureResumeCounter")
+# sys.path.append(r"./backend/api/azureResumeCounter") #add python path to grab the test function
 from counter import updatecount
 
 class TestCounter(unittest.TestCase):
