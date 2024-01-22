@@ -39,7 +39,7 @@ jobs:
     - name: 'Run unit test'
       shell: bash
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api/azureResumeCounter'
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api/tests'
         python -m unittest -v TEST-visitor_counter.py
 
     - name: 'Run Azure Functions Action'
