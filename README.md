@@ -7,9 +7,9 @@ The below diagram details the specific offerings we leveraged and their function
 
 ## Frontend
 
-- The front-end is a static website coded in HTML, CSS & javascript. I used a template provided by [Ceevee](https://www.styleshout.com/free-templates/ceevee/) and amended it to showcase my personal profile & relevant details.
+- The front-end is a static website coded in HTML, CSS & Javascript. I used a template provided by [Ceevee](https://www.styleshout.com/free-templates/ceevee/) and amended it to showcase my personal profile & relevant details.
 
-- In addition, there is also a visitor counter that shows how many times the webpage has been accessed via a javascript API call to Azure Functions.
+- In addition, there is also a visitor counter element that shows how many times the webpage has been accessed which is updated via a Javascript API call to Azure Functions. This gets activated everytime the webpage is fully rendered.
 
 - The code is hosted within an Azure Storage account blob using the **Static Website** capability that can be enabled and allows static content to be served from an endpoint.
 
@@ -17,5 +17,8 @@ The below diagram details the specific offerings we leveraged and their function
 
 ## Backend
 
+- Cosmos DB is used to store the visitor count within a container named counter which can be retrieved through the NoSQL API.
+
+- Azure Functions was used to create an event-driven trigger that whenever called through a specific URL, would increment the visitor count and return the value in JSON Format.
 
 ## CI/CD
