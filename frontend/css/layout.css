@@ -1004,3 +1004,10 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #0F9095; }
 
+.project-title{
+   color: black !important;
+}
+
+.project-title:hover{
+   color: #0F9095 !important;
+}
