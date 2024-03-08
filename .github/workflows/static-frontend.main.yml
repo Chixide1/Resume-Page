@@ -5,7 +5,7 @@ on:
     push:
         branches: [ main ]
         paths:
-            - "Azure Resume Static/frontend/**"
+            - "Azure-Resume-Static/frontend/**"
 
 jobs:
   build:
