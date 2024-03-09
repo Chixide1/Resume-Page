@@ -12,7 +12,7 @@ class Site_Visitors(models.Model):
         self.refresh_from_db()
         return self.count
 
-class Projects(models.Model):
+class Project(models.Model):
     title = models.CharField(max_length=200)
     link = models.URLField(max_length=200)
     body = models.TextField()
@@ -20,7 +20,7 @@ class Projects(models.Model):
     def __str__(self) -> str:
         return self.title
 
-class Certifications(models.Model):
+class Certification(models.Model):
     title = models.CharField(max_length=200)
     date = models.CharField(max_length=200)
 

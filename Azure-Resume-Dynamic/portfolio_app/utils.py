@@ -5,6 +5,13 @@ def counter():
     return visitors.increment()
 
 def get_projs():
-    projects = Projects.objects.all()
+    projects = Project.objects.all()
     return projects
-    
+
+def get_certs():
+    certifications = Certification.objects.all()
+    return certifications
+
+def get_work():
+    work =  Work.objects.all()
+    return work   
