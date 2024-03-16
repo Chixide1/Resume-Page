@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY',"django_insecure123456789")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = os.getenv('DEBUG',True)
+DEBUG = False
+#DEBUG = os.getenv('DEBUG',True)
 
-ALLOWED_HOSTS = ["django","localhost"]
+ALLOWED_HOSTS = ["localhost", "project"]
 
 
 # Application definition
@@ -128,4 +128,4 @@ STATIC_ROOT = BASE_DIR / '../static'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8001']
+CSRF_TRUSTED_ORIGINS = ["https://localhost:8002", "https://project"]
