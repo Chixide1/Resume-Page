@@ -21,8 +21,7 @@ services:
     depends_on:
       - project
     ports:
-      - 8001:80
-      - 8002:443
+      - 443:443
     volumes:
       - static:/static
 
