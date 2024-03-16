@@ -6,8 +6,6 @@ services:
     build:
       context: ./project
     restart: always
-    ports:
-      - 8000:8000
     volumes:
       - static:/static
     env_file:
