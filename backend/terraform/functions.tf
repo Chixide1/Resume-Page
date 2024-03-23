@@ -22,7 +22,7 @@ resource "azurerm_linux_function_app" "function" {
     }
 
     cors {
-      allowed_origins = ["*"]
+      allowed_origins = ["chikfuncs.azurewebsites.net"]
     }
 
 

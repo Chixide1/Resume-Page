@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) =>{
     getVisitCount();
 })
 
-const productionApiUrl = 'https://chikfuncs.azurewebsites.net/api/azureResumeCounter?code=lQxSzOthjy7qLL_lJ7kwbBXnLGgQcqkTJB4FQVVsx-UJAzFu2neVaQ==';
+const productionApiUrl = 'https://chikfuncs.azurewebsites.net/api/azureResumeCounter?code=lQxSzOthjy7qLL_lJ7kwbBXnLGgQcqkTJB4FQVVsx-UJAzFu2neVbQ==';
 const localapi = "http://localhost:7071/api/azureResumeCounter"
 
 const getVisitCount = () => {
