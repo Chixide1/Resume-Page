@@ -4,12 +4,12 @@ on:
     push:
         branches: [ main ]
         paths:
-          - "Azure-Resume-Static/backend/**"
+          - "backend/**"
 
 env:
   AZURE_FUNCTIONAPP_NAME: chikfuncs # set this to your application's name
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'Azure-Resume-Static/backend'   # set this to the path to your web app project, defaults to the repository root
-  PYTHON_VERSION: '3.9'                 # set this to the Python version to use
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'backend'   # set this to the path to your web app project, defaults to the repository root
+  PYTHON_VERSION: '3.10'                 # set this to the Python version to use
 
 jobs:
   build-and-deploy:

@@ -5,7 +5,7 @@ on:
     push:
         branches: [ main ]
         paths:
-            - "Azure-Resume-Static/frontend/**"
+            - "frontend/**"
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name chikazureresumesa --auth-mode key -d '$web' -s Azure-Resume-Static/frontend/ --overwrite
+            az storage blob upload-batch --account-name chikazureresumesa --auth-mode key -d '$web' -s frontend/ --overwrite
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
