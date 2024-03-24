@@ -11,13 +11,16 @@ async function getVisitCount() {
 
     const response = await fetch(productionApiUrl);
 
-    const data = await response.json();
+    if (!response.ok) {
+      console.error("API request failed:", response.status + " - " + response.statusText);
+      throw "API request error";
+    }
 
-  
+    const data = await response.json();
 
     console.log("Website called function API.");
 
-    count = data;
+    const count = data;
 
     document.getElementById("counter").innerText = count;
 
