@@ -50,7 +50,5 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-          sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          func azure functionapp publish chikfuncs
+          az functionapp deployment source config-zip -g azure-resume -n chikfuncs --src api.zip
