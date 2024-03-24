@@ -3,7 +3,7 @@ from azure.cosmos import CosmosClient
 import os
 import json
 
-app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
+app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
 @app.route(route="counter")
 def counter(req: func.HttpRequest) -> func.HttpResponse:

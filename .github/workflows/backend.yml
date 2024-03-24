@@ -51,4 +51,4 @@ jobs:
       with:
         inlineScript: |
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          az functionapp deployment source config-zip -g azure-resume -n chikfuncs --src api.zip
+          func azure functionapp publish chikfuncs
