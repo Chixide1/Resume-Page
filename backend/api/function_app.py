@@ -22,7 +22,7 @@ def counter(req: func.HttpRequest) -> func.HttpResponse:
     
         return func.HttpResponse(json.dumps(updated_item["count"]))
     except:
-        return func.HttpResponse("This isn't working")
+        return func.HttpResponse(status_code=400)
     
 def updatecount(item):
     count = item["count"] # Gets the value for count
