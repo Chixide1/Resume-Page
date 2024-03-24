@@ -16,7 +16,7 @@ resource "azurerm_cosmosdb_account" "dbaccount" {
   geo_location {
     location          = azurerm_resource_group.rg.location
     failover_priority = 0
-    zone_redundant    = false ###USE TRUE###, for some reason i can't use zonal redundancy for now due to azure overload in west europe regionX)
+    zone_redundant    = false
   }
 }
 
@@ -32,4 +32,8 @@ resource "azurerm_cosmosdb_sql_container" "container" {
   account_name        = azurerm_cosmosdb_account.dbaccount.name
   database_name       = azurerm_cosmosdb_sql_database.cosmosdb.name
   partition_key_path  = "/id"
+
+    provisioner "local-exec" {
+    command = "az cosmosdb item create --resource-group ${azurerm_resource_group.rg.name} --name ${azurerm_cosmosdb_account.dbaccount.name} --database-name ${azurerm_cosmosdb_sql_database.cosmosdb.name} --container-name ${azurerm_cosmosdb_sql_container.container.name} --api-version 2021-05-15 --content '{ 'id': 1, 'count': 0 }'"
+  }
 }

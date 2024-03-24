@@ -1,5 +1,5 @@
 import unittest
-from dbcounter import updatecount
+from .function_app import updatecount
 
 class TestCounter(unittest.TestCase):
 
