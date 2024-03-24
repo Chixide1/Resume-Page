@@ -15,6 +15,7 @@ resource "azurerm_linux_function_app" "function" {
   storage_account_access_key = azurerm_storage_account.storage_acct.primary_access_key
   app_settings = {
     conn_str = element(azurerm_cosmosdb_account.dbaccount.connection_strings, 4)
+    SCM_DO_BUILD_DURING_DEPLOYMENT = true
   }
   site_config {
     application_stack {
