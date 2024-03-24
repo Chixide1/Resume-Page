@@ -6,4 +6,5 @@ __queuestorage__
 local.settings.json
 test
 .venv
+__pycache__
 TEST-visitor_counter.py
