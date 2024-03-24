@@ -42,13 +42,13 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api'
         python -m unittest -v TEST-visitor_counter.py
         popd
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-        zip -r api.zip api
-        popd
+      # pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+      # zip -r api.zip api
+      # popd
     
-    - name: upload function to azure
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
-          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          az functionapp deployment source config-zip -g azure-resume -n chikfuncs --src api.zip
+    #- name: upload function to azure
+      #uses: azure/CLI@v1
+      #with:
+      #  inlineScript: |
+      #  pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+      #  az functionapp deployment source config-zip -g azure-resume -n chikfuncs --src api.zip
