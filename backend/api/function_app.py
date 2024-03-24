@@ -16,7 +16,7 @@ def counter(req: func.HttpRequest) -> func.HttpResponse:
         client = CosmosClient.from_connection_string(conn_str=conn) # Connection to Azure CosmosDB API
         database = client.get_database_client(database_name) # Gets database we want to query from
         container = database.get_container_client(container_name) # Gets container inside the database we want to work with
-        item = container.read_item("1", partition_key="1") # Finds item ID 1 in container
+        item = container.read_item("1", partition_key="1") # finds item ID 1 in container
         updated_item = updatecount(item) #increments count value
         updated_item = container.upsert_item(item) # Uploads dictionary back to the Cosmos DB with updated count value
     
