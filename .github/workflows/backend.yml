@@ -36,7 +36,7 @@ jobs:
         pip install -r requirements.txt
         popd
         
-    - name: 'Run unit test'
+    - name: 'Run unit test and create zip file of function'
       shell: bash
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/api'
