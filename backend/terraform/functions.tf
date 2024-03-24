@@ -23,7 +23,7 @@ resource "azurerm_linux_function_app" "function" {
     }
 
     cors {
-      allowed_origins = ["https://ckazureresumesa.z33.web.core.windows.net"]
+      allowed_origins = ["https://ckazureresumesa.z33.web.core.windows.net","https://ck-cloud-resume-endpoint.azureedge.net"]
     }
   }
 }
