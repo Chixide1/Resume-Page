@@ -1,0 +1,34 @@
+version: "3.9"
+name: mysite
+
+services:
+
+  project:
+    container_name: application
+    build:
+      context: ./project
+    restart: always
+    volumes:
+      - static:/static
+      - type: bind
+        source: ./db
+        target: /db
+    env_file:
+      - .env
+
+  nginx:
+    container_name: webserver
+    build:
+      context: ./nginx
+    restart: always
+    depends_on:
+      - project
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - static:/static
+
+volumes:
+  static:
+  postgres_data:
