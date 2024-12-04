@@ -3,7 +3,7 @@
 This is my cloud resume built using Azure with the [ACG Project Video](https://www.youtube.com/watch?v=ieYrBWmkfno&t=635s) as a reference.I used VS Code as my IDE of choice.
 
 The below diagram details the specific offerings we leveraged and their functionalities within the project's architecture.
-![Alt text](frontend/images/project-structure.png)
+![Alt text](Azure/frontend/images/project-structure.png)
 
 ## Frontend
 
